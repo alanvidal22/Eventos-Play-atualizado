@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css/Style-blue.black.css">
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+    <header>
+        <h1>Eventos Play</h1>
+        <nav>
+            <a href="index.html">Inicio</a>
+            <a href="contato.html">contato</a>
+            <a href="formulario de criar Evento.html" >Criar evento</a>
+            <input type="search" id="search" name="categoria" placeholder="🔎Pesquisar...">
+            <br><br></input>
+            <div class="profile">
+                <div class="username"></div>
+                <div class="avatar">
+                    <img src="./img/logo.jpeg" alt="Avatar">
+                </div>
+            </div>     
+            
+            
+        </nav>
+       
+        </div>
+    </header>
+    <main>
+        <div class="cards">
+            <span class='title'>Batizados</span>
+            <img src="./img/img9-x.jpg" id="banner">
+                <span class="txt">Batizados </span>
+                <a  href= "evento_de_batismo.html">Clique aqui</a>
+            </div>
+        </div>
+
+        <div class="cards">
+            <span class='title'>Primeira comunhão</span>
+            <img src="./img/img10-x.jpg" id="banner">
+                <span class="txt">Evento musical</span>
+                <a  href="evento_de_primeira_comunhão.html" >Clique aqui</a>
+            </div>
+        </div>
+
+            </div>
+
+           
+               
+        </div>
+
+    </main>
+
+    <footer>  
+        <div class="card-final">
+            <span class="title-final">CIDADES</span>
+            <ul>
+                <li>Natal-RN</li>
+                <li>João Pessoa-PB</li>
+                <li>Fortaleza-CE</li>
+                <li>Recife-PE</li>
+            </ul>
+        </div>
+        <div class="card-final">
+            <span class="title-final">SERVIÇOS</span>
+            <ul>
+                <li>Eventos artísticos</li>
+                <li>Passeios turísticos</li>
+                <li>Baladas</li>
+                <li>Reservas</li>
+            </ul>
+        </div>
+        <div class="card-final">
+            <span class="title-final"> CONTATOS</span>
+            <ul>
+                <li>Carlos Roberto Gomes da Silva</li>
+                <li>84 99460-8814</li>
+                <li>calosroberto@gmail.com</li>
+            </ul>
+        </div>
+        
+           
+        </div>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+
+            }
+            
+            header{ background-color: rgb(0, 132, 255);
+               /* Cor de fundo do menu */
+            }
+            
+            nav ul {
+                list-style-type: none; /* Remove os marcadores de lista */
+                margin: 0;
+                padding: 0;
+                display: flex; /* Exibe os itens na horizontal */
+                width: 30%;
+            }
+            
+            nav ul li {
+                margin-right: 20px; /* Espaçamento entre os itens */
+            }
+            
+            nav ul li a {
+                color: transparent; /* Torna o texto dos links transparente */
+                text-decoration: none; /* Remove sublinhado dos links */
+                padding: 10px 20px; /* Espaçamento interno */
+                transition: background-color 0.3s; /* Transição suave da cor de fundo */
+                display: block; /* Faz com que os links ocupem todo o espaço disponível */
+            }
+    
+            nav ul li img {
+                width: 40px; /* Ajusta o tamanho das imagens */
+                height: 40px;
+            }
+    
+            nav ul li a:hover img {
+                filter: brightness(70%); /* Reduz a luminosidade da imagem ao passar o mouse */
+            }
+    
+            nav ul li a:hover {
+                background-color: rgb(0, 121, 214); /* Cor de fundo ao passar o mouse */
+            }
+            .profile {
+    display: flex;
+    align-items: center;
+    margin-left: auto; 
+    padding: 10px; 
+}
+
+.username {
+    color: #ffffff;
+    margin-right: 10px;
+   
+}
+
+.avatar img {
+  
+    border-radius: 50%; 
+  
+}
+.profile {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    padding: 10px;
+}
+
+.username {
+    color: #ffffff; /* Cor do texto do nome de usuário */
+    font-weight: bold; /* Deixa o texto em negrito */
+    margin-right: 10px;
+}
+
+.avatar img {
+    width: 40px; /* Tamanho da imagem do avatar */
+    height: 40px;
+    border-radius: 50%; /* Deixa a imagem redonda */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço definido */
+    border: 2px solid #ffffff; /* Adiciona uma borda branca ao redor da imagem */
+}
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="#"><img src="https://cdn2.iconfinder.com/data/icons/ui-kit-developer-glyphs/16/GlyphIcons-Home-512.png" alt="Home"></a></li>
+                <li><a href="#"><img src="https://static.vecteezy.com/system/resources/thumbnails/022/186/053/small/alert-design-info-sign-pro-icon-isolate-with-black-background-png.png" alt="Sobre"></a></li>
+                <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/512/75/75668.png" alt="Serviços"></a></li>
+                <li><a href="#"><img src="https://cdn-icons-png.freepik.com/256/455/455705.png" alt="Contato"></a></li>
+            </ul>
+        </nav>
+    
+        
+    </footer>
+    <script src="app.js"></script>
+    <script src="serviceWorker.js"></script>
+</body>
+</html>

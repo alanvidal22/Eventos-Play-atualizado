@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos de Réveillon</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/ae4.jpg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background-blend-mode: overlay;
+        }
+
+        .content {
+            background-color: rgba(0, 174, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 80px;
+            margin-bottom: 80px;
+        }
+
+        .content h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .content .price {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .content .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #0084ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .content .btn:hover {
+            background-color: #c74421;
+        }
+
+        .text-section {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            position: relative;
+            margin-top: 10%;
+        }
+
+        .location {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 255, 0.7); 
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .location img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .location h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .location p {
+            font-size: 1em;
+            margin: 4px 0;
+        }
+
+        .location-content {
+            flex: 1;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="" alt="Imagem do Evento"> 
+            <div class="text-section">
+                <p>Prepare-se para uma virada de ano inesquecível com shows incríveis em diferentes destinos!</p> 
+            </div>
+            <h1>Eventos de Réveillon</h1>
+            
+
+            <div class="location">
+                <img src="./img/ae1.jpg" alt="Imagem do Evento"> 
+                <div class="location-content">
+                    <h2>Réveillon de Natal, Rio Grande do Norte</h2>
+                    <p>A virada do ano terá shows:</p>
+                    <p>23h às 00h: Dom Cardoso e seus Metais</p>
+                    <p>00h30: Umaré</p>
+                    <p>2h às 3h: Frevo do Xico</p>
+                    <p>3h30 às 4h30: Luizinho Nobre</p>
+                    <p>5h: Banda Detroit</p>
+                    <p>Local: Natal, Rio Grande do Norte</p>
+                </div>
+            </div>
+
+            <div class="location">
+                <img src="./img/ae2.jpg" alt="Imagem do Evento"> 
+                <div class="location-content">
+                    <h2>Réveillon de João Pessoa</h2>
+                    <p>A virada do ano terá shows de:</p>
+                    <p>Raniery Gomes, Limão com Mel, Alinne Rosa e Banda Encantus</p>
+                    <p>Local: Busto de Tamandaré, entre as praias de Tambaú e Cabo Branco, João Pessoa</p>
+                </div>
+            </div>
+
+            <div class="location">
+                <img src="./img/ae3.jpg" alt="Imagem do Evento"> 
+                <div class="location-content">
+                    <h2>Réveillon de Recife, Pernambuco</h2>
+                    <p>A virada do ano terá shows de:</p>
+                    <p>Ivete Sangalo, Alceu Valença, Nattan, Mari Fernandez, Priscila Senna, Conde e muito mais</p>
+                    <p>O Recife inaugura um novo padrão de virada de ano</p>
+                </div>
+            </div>
+
+            <p class="price">Preço do Ingresso: Acesso Gratuito</p>
+            <a href="formulario de cadastro de compra.html" class="btn">Solicitar Compra</a>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="serviceWorker.js"></script>
+</body>
+</html>

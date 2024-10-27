@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario | GN</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(28, 147, 220), rgb(17, 54, 71));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+            color: white;
+        }
+        .box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+        fieldset {
+            border: 3px solid dodgerblue;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        legend {
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+        }
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .inputUser, select, textarea {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            padding: 5px 0;
+            cursor: pointer;
+        }
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput,
+        select:focus ~ .labelInput,
+        select:valid ~ .labelInput,
+        textarea:focus ~ .labelInput,
+        textarea:valid ~ .labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        select {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+        select option {
+            background-color: blue;
+            color: white;
+        }
+        #submit {
+            background-image: linear-gradient(to right, rgb(17, 53, 95), rgb(20, 93, 220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            margin-top: 20px;
+            text-align: center;
+            text-decoration: none; 
+            display: block; 
+        }
+        #submit:hover {
+            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(19, 34, 195));
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form method="post" action="process_form.php">
+            <fieldset>
+                <legend><b>Formulário de Pagamento</b></legend><br>
+                <legend><b>Chave Pix do Eventos Play: xxx.xxx.xxx-xx </b></legend><br>
+                
+                <!-- Pagamento PIX -->
+                <div class="inputBox">
+                    <label for="pagamento_pix">Pagamento PIX:</label>
+                    <select id="pagamento_pix" name="pagamento_pix">
+                        <option value="telefone">Telefone</option>
+                        <option value="cpf">CPF</option>
+                        <option value="cnpj">CNPJ</option>
+                    </select>
+                </div>
+                <!-- Link para Pagamento PIX -->
+                <div class="inputBox">
+                    <a href="compra_em_pix.html" id="pix_link" target="_blank" style="text-decoration: none; color: white;">
+                        <div id="submit">Pagar com PIX</div>
+                    </a>
+                </div>
+
+             
+
+                <!-- Pagamento Cartão de Crédito/Débito -->
+                <div class="inputBox">
+                    <label for="pagamento_cartao">Pagamento no Cartão de Crédito/Débito:</label>
+                </div>
+                
+          
+                <div class="inputBox">
+                    <input type="text" name="nome_cartao" id="nome_cartao" class="inputUser" required>
+                    <label for="nome_cartao" class="labelInput">Nome no Cartão</label>
+
+
+                    </div>
+
+                <!-- Link para Pagamento Cartão -->
+                <div class="inputBox">
+                    <a href="compra_em_cartão.html" id="cartao_link" target="_blank" style="text-decoration: none; color: white;">
+                        <div id="submit">Pagar com Cartão</div>
+                    </a>
+                </div>
+
+                <br><br>
+                
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

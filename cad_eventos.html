@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+
+        .container {
+            display: flex;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            max-width: 800px;
+            overflow: hidden;
+        }
+
+        .image-section {
+            width: 40%;
+            background-color: #004fa4; /* Azul claro */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-section img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .form-section {
+            width: 60%;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #00a1ff; /* Azul escuro */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input[type="text"], input[type="date"], input[type="file"] {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #004cff;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #0088ff; /* Vermelho escuro */
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #c6252a; /* Vermelho claro */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-section">
+            <img src="./img/logo.jpeg" alt="Imagem ilustrativa">
+        </div>
+        <div class="form-section">
+    <h1>Cadastro</h1>
+    <form method="post" action="cad_eventos.php" enctype="multipart/form-data">
+        Título: <input type="text" name="titulo" id="nome"><br><br>
+        Conteúdo: <input type="text" name="conteudo" id="conteudo"><br>
+       Data: <input type="date" name="data" id="data"><br>
+        <input type="file" name="imagem" accept="image/*"><br>
+        Resumo: <input type="text" name="resumo" id="resumo"><br>
+        <input type="submit" value="Cadastrar">
+    </form> 
+</body>
+</html>

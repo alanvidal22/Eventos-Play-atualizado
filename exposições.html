@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exposições em Natal, RN</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-image: url('./img/EP4.jpeg'); 
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            background-blend-mode: overlay;
+        }
+
+        .content {
+            background-color: rgba(0, 174, 255, 0.8);
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .content img {
+            width: 100%;
+            height: auto;
+            border-radius: 80px;
+            margin-bottom: 80px;
+        }
+
+        .content h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        .content p {
+            margin: 10px 0;
+            font-size: 1.2em;
+        }
+
+        .content .price {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .content .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #0084ff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .content .btn:hover {
+            background-color: #c74421;
+        }
+
+        .text-section {
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            position: relative;
+            margin-top: 10%;
+        }
+
+        .location {
+            margin-top: 20px;
+            background-color: rgba(0, 0, 255, 0.7); 
+            padding: 15px;
+            border-radius: 10px;
+            text-align: left;
+            display: flex;
+            align-items: center;
+        }
+
+        .location img {
+            width: 100px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 15px;
+        }
+
+        .location h2 {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .location p {
+            font-size: 1em;
+            margin: 4px 0;
+        }
+
+        .location-content {
+            flex: 1;
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <img src="" alt="Imagem do Evento"> 
+            <div class="text-section">
+                <p>Confira as exposições em Natal e aproveite para explorar a cultura local!</p> 
+            </div>
+            <h1>Exposições em Natal, RN</h1>
+            
+
+            <div class="location">
+                <img src="./img/museu-camara-cascudo.jpg" alt="Imagem do Evento"> 
+                <div class="location-content">
+                    <h2>Museu Câmara Cascudo</h2>
+                    <p>Endereço: Av. Hermes da Fonseca, 1398 - Tirol, Natal - RN, 59020-650</p>
+                    <p>Horário de Funcionamento: Fechado ⋅ Abre sex. às 08:30</p>
+                    <p>Telefone: (84) 3342-2289</p>
+                    <p>Inauguração: 1960 (64 anos)</p>
+                </div>
+            </div>
+
+            <div class="location">
+                <img src="./img/Parque da cidade.jpg" alt="Imagem do Evento"> 
+                <div class="location-content">
+                    <h2>Parque da Cidade</h2>
+                    <p>Exposição: Povos Indígenas do RN: Expressões Artísticas, Existências e Resistências</p>
+                    <p>Data: 17 a 21 de abril</p>
+                    <p>Horário: das 13h às 17h</p>
+                    <p>Horário de Funcionamento: Diariamente (Domingo a Domingo) das 05h às 17h30</p>
+                    <p>Acessos:
+                        <br>Sul - Av Omar O'Grady, nº 8080, Candelária, Natal/RN - Cep.: 59020-400
+                        <br>Oeste - Rua Santo Amaro, s/n, Cidade Nova, Natal/RN - Cep.: 59072-620
+                    </p>
+                </div>
+            </div>
+
+            <div class="location">
+                <img src="./img/Museu 2.jpg" alt="Imagem do Evento"> 
+                <div class="location-content">
+                    <h2>Museu de Cultura Popular Djalma Maranhão</h2>
+                    <p>Horário de Funcionamento: De Segunda a Sexta-feira, de 08:00 às 17:00h. No momento encontra-se fechado para a visitação pública, por estarmos na iminência do início das obras na sua estrutura.</p>
+                    <p>Site: <a href="https://blogdafuncarte.com.br/">(https://blogdafuncarte.com.br)/</a></p>
+                    <p>Email Público: funcarte@natal.rn.gov.br</p>
+                    <p>Telefone Público: (84) 3232-8149</p>
+                    <p>Exposição: Preservação e difusão da cultura e das tradições populares do Rio Grande do Norte</p>
+                </div>
+            </div>
+
+            <p class="price">Aprecie a diversidade cultural de Natal!</p>
+            <a href="formulario de cadastro de compra.html" class="btn">Solicitar Compra</a>
+        </div>
+    </div>
+    <script src="app.js"></script>
+    <script src="serviceWorker.js"></script>
+</body>
+</html>

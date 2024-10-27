@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css/Style Sheets2.css">
+    <link rel="manifest" href="manifest.webmanifest">
+</head>
+<body>
+    <header>
+        <span id="Carlos">Eventos Play</span>
+        <nav>
+            <a href="perfil.php" >Volte fazer mais compras no Eventos Play</a>
+            <a id="contact" href="index.html" > SAIR</a>
+            
+            
+        </nav>
+    </header>
+
+    <main>
+        <img src="./img/fundo2x.jpg">
+        <h1 id="saudacao">
+            Eventos Play agradecemos sua avaliação do nosso site <br>
+         
+            <form id="rating-form" action="submit_rating.php" method="POST">
+                <div class="rating">
+                    <span class="star" data-value="5">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="1">&#9733;</span>
+                    <input type="hidden" name="rating" id="rating-value">
+                </div>
+                <button type="submit">Enviar Avaliação</button>
+            </form>
+        <script src="script.js"></script>
+
+        </h1>
+        <script>
+document.addEventListener('DOMContentLoaded', (event) => {
+    const stars = document.querySelectorAll('.star');
+    const ratingInput = document.getElementById('rating-value');
+
+    stars.forEach(star => {
+        star.addEventListener('click', function() {
+            stars.forEach(s => s.classList.remove('selected'));
+            this.classList.add('selected');
+            this.classList.add('clicked');
+            let previous = this.previousElementSibling;
+            while (previous) {
+                previous.classList.add('selected');
+                previous = previous.previousElementSibling;
+            }
+            ratingInput.value = this.getAttribute('data-value');
+        });
+
+        star.addEventListener('mouseover', function() {
+            stars.forEach(s => s.classList.remove('hovered'));
+            this.classList.add('hovered');
+            let previous = this.previousElementSibling;
+            while (previous) {
+                previous.classList.add('hovered');
+                previous = previous.previousElementSibling;
+            }
+        });
+
+        star.addEventListener('mouseout', function() {
+            stars.forEach(s => s.classList.remove('hovered'));
+        });
+    });
+});
+
+
+        </script>
+
+            
+        <section>
+
+        </section>
+    </main>
+
+    <footer></footer>
+    <script src="app.js"></script>
+    <script src="serviceWorker.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORMULARIO | GN</title>
+    <link rel="manifest" href="manifest.webmanifest">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-image: linear-gradient(to right, rgb(28, 147, 220), rgb(17, 54, 71));
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 110vh;
+            color: white;
+        }
+        .box {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 20px;
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+        fieldset {
+            border: 3px solid dodgerblue;
+            border-radius: 10px;
+            padding: 20px;
+        }
+        legend {
+            border: 1px solid dodgerblue;
+            padding: 10px;
+            text-align: center;
+            background-color: dodgerblue;
+            border-radius: 8px;
+        }
+        .inputBox {
+            position: relative;
+            margin-bottom: 20px;
+        }
+        .inputUser, select, textarea {
+            background: none;
+            border: none;
+            border-bottom: 1px solid white;
+            outline: none;
+            color: white;
+            font-size: 15px;
+            width: 100%;
+            padding: 5px 0;
+            cursor: pointer;
+        }
+        .labelInput {
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            pointer-events: none;
+            transition: .5s;
+        }
+        .inputUser:focus ~ .labelInput,
+        .inputUser:valid ~ .labelInput,
+        select:focus ~ .labelInput,
+        select:valid ~ .labelInput,
+        textarea:focus ~ .labelInput,
+        textarea:valid ~ .labelInput {
+            top: -20px;
+            font-size: 12px;
+            color: dodgerblue;
+        }
+        select {
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+        }
+        select option {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .button {
+            background-image: linear-gradient(to right, rgb(17, 53, 95), rgb(20, 63, 220));
+            width: 100%;
+            border: none;
+            padding: 15px;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+        .button:hover {
+            background-image: linear-gradient(to right, rgb(0, 80, 172), rgb(19, 69, 195));
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <form method="post" action="formulario de criar evento.php">
+            <fieldset>
+                <legend><b>Formulário de Promotor</b></legend><br>
+                <div class="inputBox">
+                    <input type="text" name="responsavel" id="responsavel" class="inputUser" required>
+                    <label for="responsavel" class="labelInput">Nome do Responsável</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="evento" id="evento" class="inputUser" required>
+                    <label for="evento" class="labelInput">Nome do Evento</label>
+                </div>
+                <div class="inputBox">
+                    <label for="categoria">Categoria de Interesse:</label>
+                    <select id="categoria" name="categoria" required>
+                        <option value="esportes">Esportes</option>
+                        <option value="reveillon">Réveillon</option>
+                        <option value="passeios_e_tours">Passeios e Tours</option>
+                        <option value="shows">Show</option>
+                        <option value="palestras">Palestras</option>
+                        <option value="mesa_redonda">Mesa Redonda</option>
+                        <option value="reunioes">Reuniões</option>
+                        <option value="exposicoes">Exposições</option>
+                        <option value="teatro_eventos_artistico">Teatro e Eventos Artísticos</option>
+                        <option value="eventos_infantis">Eventos Infantis</option>
+                        <option value="eventos_gastronomico">Eventos Gastronômicos</option>
+                        <option value="eventos_religiosos">Eventos Religiosos</option>
+                    </select>
+                </div>
+                <label for="data"><b>Data:</b></label>
+                <input type="date" name="data" id="data" required>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="local" id="local" class="inputUser" required>
+                    <label for="local" class="labelInput">Local</label>
+                </div>
+                <label for="hora"><b>Hora:</b></label>
+                <input type="time" name="hora" id="hora" required>
+                <br><br>
+                <div class="inputBox">
+                    <input type="text" name="duracao" id="duracao" class="inputUser" required>
+                    <label for="duracao" class="labelInput">Duração</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="seguranca" id="seguranca" class="inputUser" required>
+                    <label for="seguranca" class="labelInput">Segurança</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="preco" id="preco" class="inputUser" required>
+                    <label for="preco" class="labelInput">Preço</label>
+                </div>
+                <div class="inputBox">
+                    <input type="text" name="atracoes" id="atracoes" class="inputUser" required>
+                    <label for="atracoes" class="labelInput">Atrações</label>
+                </div>
+                <div class="inputBox">
+                    <textarea name="observacao" id="observacao" class="inputUser" rows="4" required></textarea>
+                    <label for="observacao" class="labelInput">Observação</label>
+                    
+                    <form action="upload.php" method="post" enctype="multipart/form-data">
+                        <div class="custom-upload">
+                            <input type="file" id="upload" name="image" accept="image/*" onchange="previewImage(event)">
+                            <input type="submit" value="Enviar Imagem">
+                        </div>
+                    </form> 
+                   
+                   
+                <div class="buttons">
+                    <input type="submit" value="Enviar" class="button">
+                    
+                </div>
+            </fieldset>
+        </form>
+        <script src="app.js"></script>
+    <script src="serviceWorker.js"></script>
+    </div>
+</body>
+</html>
